@@ -1,0 +1,58 @@
+@import './compoments/GlobalConfig/GlobalConfig.scss';
+
+#root{
+    background-color: #dbdbdb;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.App {
+    overflow: hidden;
+    width: 116rem;
+    height: 90vh;
+    background-color: #e7e8f3;
+    border-radius: $unit2;
+    box-shadow: 0 0 0.8rem black;
+    margin: 4% 0;
+    // position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2.2fr 1fr;
+}
+
+.App__Container {
+    position: relative;
+    padding: 0 1rem;  
+}
+
+.Container {
+    position: relative;
+    top: 20px;
+    height: calc(100vh - 46px);
+    overflow-y: overlay;
+
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;        /* Màu nền ngoài của thanh scrollbar */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #ffa500;    /* Màu của thanh cuộn (scroll thumb) */
+        border-radius: 5px;       /* Bo góc scroll thumb */
+        border: 2px solid #ccc;  /* Không hỗ trợ padding, margin, transition nên dùng viền cùng màu nên để padding scroll thumb */
+
+        &:hover {
+            background-color: #ff8000; /* Hiệu ứng di chuột đổi màu*/
+        }
+    }
+
+    &:hover::-webkit-scrollbar {
+        width: 6px;
+    }   
+}

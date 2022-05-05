@@ -1,0 +1,32 @@
+@import '../GlobalConfig/GlobalConfig.scss';
+
+.Header {
+    height: $header;
+    position: sticky;
+    top: 10px;
+    left:0;
+    right: 0;
+    @extend .a-flex;
+
+    .HeaderBtn {
+        width: 80px;
+        @extend .flex-item-around;
+    }
+
+    .HeaderSearch {
+        height: 80%;
+        flex: 1;
+        max-width: 400px;
+        background-color: #fff;
+        border-radius: 20px;
+        @extend .px-8;
+
+        input.HeaderSearchIcon {
+            border: none;
+            outline: none;
+            flex: 1;
+
+        }
+    }
+}
+

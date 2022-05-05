@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,500;0,600;0,700;1,100;1,200;1,400;1,500;1,700&family=Roboto:wght@100&display=swap');
+@import 'normalize.css';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+
+$unit2: 2rem;
+$unit5: 5rem;
+$white-color: #ffff;
+$black-color: #000;
+$primary-color: #F05123;
+
+.Container {
+  position: relative;
+  top: 20px;
+  height: calc(100vh - 46px);
+  overflow-y: overlay;
+
+  &::-webkit-scrollbar {
+      width: 0px;
+  }
+
+  &::-webkit-scrollbar-track {
+      background: transparent;        /* Màu nền ngoài của thanh scrollbar */
+  }
+
+  &::-webkit-scrollbar-thumb {
+      background-color: #ffa500;    /* Màu của thanh cuộn (scroll thumb) */
+      border-radius: 5px;       /* Bo góc scroll thumb */
+      border: 2px solid #ccc;  /* Không hỗ trợ padding, margin, transition nên dùng viền cùng màu nên để padding scroll thumb */
+
+      &:hover {
+          background-color: #ff8000; /* Hiệu ứng di chuột đổi màu*/
+      }
+  }
+
+  &:hover::-webkit-scrollbar {
+      width: 6px;
+  }   
+}
+
+// Flex
+.flex {
+  display: flex;
+}
+
+.a-flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-item-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-item-betwen {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-item-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.flex-colum {
+  flex-direction: colum;
+}
+
+// Margin and Pading
+.py-8 {
+  padding: 8px 0;
+}
+.px-8 {
+  padding: 0 8px;
+}
+
+.my-8 {
+  margin: 8px 0;
+}
+
+.mx-8 {
+  margin: 0 8px;
+}
+
+.mt-2 {
+  margin-top: 2px;
+}
+// Icon
+.icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+
+$header: 46px;
+
+

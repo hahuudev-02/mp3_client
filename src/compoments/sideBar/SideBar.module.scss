@@ -1,0 +1,84 @@
+@import '../GlobalConfig/GlobalConfig.scss';
+
+$yellow: #ffc876;
+$textItemColor: #676669;
+
+#SideBar {
+    padding: 20px;
+    background-color: $white-color;
+    border-bottom-left-radius: $unit2;
+    border-top-left-radius: $unit2;    
+}
+
+.logo {
+    height: 40px;
+
+    i.icon {
+        width: 50px;
+        font-weight: 700;
+        font-size: 3rem;
+        color: $yellow;
+    }
+
+    span {
+        flex: 1;
+        font-size: 2rem;
+    }
+
+    .Title {
+        color: $yellow;
+    }
+}
+
+
+.navBar {
+    margin-top: 8px;
+    padding: 1rem;
+
+    .navItem {
+        margin-top: 2px;
+        height: 44px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        border-radius: 14px;
+    
+        .navItemLink {
+            height: 100%;
+            text-decoration: none;
+                  
+            i.iconNav {
+                margin: 0 10px;
+                width: 40px;
+                font-size: 2rem;
+                color: $textItemColor;
+            }
+    
+            h3.navItemTitle {
+                flex: 1;
+                font-size: 1.8rem;
+                color: $textItemColor;
+                font-weight: 450;
+                margin-bottom: 20px;
+            }
+        }
+    
+        &:hover {
+            background-color: $black-color;
+
+            h3.navItemTitle, i.iconNav  {
+                color: $white-color;
+            }
+        }
+        
+    }
+
+    .active {
+        background-color: $black-color;
+        a.navItemLink {
+            h3.navItemTitle, i.iconNav  {
+                color: $white-color;
+            }
+        }
+    }
+}
