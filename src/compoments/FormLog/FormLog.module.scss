@@ -1,0 +1,71 @@
+.Container {
+    
+    .conten {
+        width: 70vw;
+        max-width: 640px;
+        padding: 40px 0;
+        border-radius: 20px;
+        box-shadow: 0 0 0.8rem black;
+        background-color: #fff;
+
+        img.logo {
+            width: 50px;
+            height: 50px;
+        }
+
+        .title {
+            margin-top: 20px;
+            font-size: 2.2rem;
+            font-weight: 600;
+            user-select: none;
+        }
+
+        .Login {
+            margin: 20px 0;
+
+            .button {
+                margin: 14px 0;
+                height: 44px;
+                width: 340px;
+                border-radius: 20px;
+                border: 1px solid rgb(20, 8, 8);
+                cursor: pointer;
+    
+                .icon {
+                    width: 44px;
+                }
+                .name {
+                    flex: 1;
+                    text-align: center;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    user-select: none;
+                }
+    
+                &:hover {
+                    background-color: rgba(93, 122, 136, 0.4);
+                }
+            }
+        }
+
+        .noAcc {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            
+            a.link{
+                color: var(--primary-color);       
+            }
+        }
+        
+    }
+
+    .About {
+        margin-top: 30px;
+        text-align: center;
+
+        .link, span.span  {
+            font-size: 1.4rem;
+            color: var(--white-color);
+        }
+    }
+}

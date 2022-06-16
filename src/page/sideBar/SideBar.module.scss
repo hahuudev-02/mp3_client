@@ -1,0 +1,153 @@
+@import '../../compoments/GlobalStyles/GlobalStyles.scss';
+
+$yellow: #ffc876;
+$textItemColor: #676669;
+$mediaHeight: 84px;
+$logoHeight: 40px;
+$itemHeigth: 40px;
+$navBarHeigth: 160px;
+$myMusicHeigth: 154px;
+$paddingSideBar: 2rem;
+
+#SideBar {
+    max-height: 90vh;
+    padding: $paddingSideBar;
+    background-color: $white-color;
+    border-bottom-left-radius: $unit2;
+    border-top-left-radius: $unit2;
+}
+
+.logo {
+    height: $logoHeight;
+    margin-bottom: 8px;
+
+    i.icon {
+        width: 50px;
+        font-weight: 700;
+        font-size: 3rem;
+        color: $yellow;
+    }
+
+    span {
+        flex: 1;
+        font-size: 2rem;
+    }
+
+    .Title {
+        color: $yellow;
+    }
+}
+
+.navBar {
+    height: $navBarHeigth;
+    margin-top: 12px;
+    padding: 0 1rem;
+
+    .navItem {
+        height: $itemHeigth;
+        margin-top: 2px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        .navItemLink {
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            border-radius: 14px;
+
+            i.iconNav {
+                margin: 0 10px;
+                width: 40px;
+                font-size: 2rem;
+                color: $textItemColor;
+            }
+
+            h3.navItemTitle {
+                flex: 1;
+                font-size: 1.6rem;
+                color: $textItemColor;
+                font-weight: 400;
+            }
+
+            &:hover {
+                background-color: $black-color;
+
+                h3.navItemTitle,
+                i.iconNav {
+                    color: $white-color;
+                }
+            }
+        }
+
+        .active {
+            background-color: $black-color;
+
+            h3.navItemTitle,
+            i.iconNav {
+                color: $white-color;
+            }
+        }
+    }
+
+    h2.title {
+        padding-bottom: 6px;
+        font-size: 1.2rem;
+        color: grey;
+    }
+}
+
+.myMusic {
+    height: $myMusicHeigth;
+}
+
+.subNav {
+    height: calc(100% - $mediaHeight - $myMusicHeigth - $navBarHeigth - $logoHeight - $paddingSideBar);
+    overflow: hidden;
+
+    .list {
+        height: calc(100% - 2 * $paddingSideBar);
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent; /* Màu nền ngoài của thanh scrollbar */
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #ffa500; /* Màu của thanh cuộn (scroll thumb) */
+            border-radius: 5px; /* Bo góc scroll thumb */
+            border: 2px solid #ccc; /* Không hỗ trợ padding, margin, transition nên dùng viền cùng màu nên để padding scroll thumb */
+
+            &:hover {
+                background-color: #ff8000; /* Hiệu ứng di chuột đổi màu*/
+            }
+        }
+
+        &:hover::-webkit-scrollbar {
+            width: 6px;
+        }
+    }
+}
+
+.media {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    height: $mediaHeight;
+
+    &::after {
+        content: '';
+        position: absolute;
+        height: 0.9px;
+        width: 100%;
+        left: 0;
+        top: -2px;
+        background-color: #000;
+    }
+}

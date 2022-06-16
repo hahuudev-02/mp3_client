@@ -1,0 +1,80 @@
+@import '../../compoments/GlobalStyles/GlobalStyles.scss';
+
+$heightFooter: 84px;
+
+.Footer {
+    margin: 0 1rem;
+    position: sticky;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    background-color: $white-color;
+    height: $heightFooter;
+    box-shadow: 0 0 0.8rem rgb(51, 48, 48);
+    border-radius: 10px;
+    padding: 6px 10px;
+
+    .Control {
+        width: 100%;
+        flex: 1;
+        @extend .flex-item-center;
+
+        .media {
+            flex: 1;
+
+            i.icon {
+                font-size: 1.8rem;
+            }
+        }
+
+        .options {
+            flex: 1.6;
+
+            i.icon {
+                font-size: 2.6rem;
+            }
+
+            i.iconPlay {
+                margin: 0 6px;
+            }
+
+
+        }
+
+        .volume {
+            flex: 1;
+
+            input#range {
+                margin-left: 4px;
+                max-width: 96px;
+                appearance: none;
+                height: .2rem;
+                background-color: #ddd;
+                cursor: pointer;
+            } 
+        }
+    }
+
+    .SeekBar {
+        width: 100%;
+        height: 20px;
+
+        span.time {
+            font-size: 1.2rem;
+            font-weight: 550;
+        }
+
+        input#range {
+            width: 76%;
+            appearance: none;
+            height: .2rem;
+            background-color: #ddd;
+            cursor: pointer;
+        }
+
+        input#range::-ms-track  {
+            background-color: red;
+        }
+    }
+}
+

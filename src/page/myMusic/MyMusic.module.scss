@@ -1,0 +1,35 @@
+
+
+.MyMusic {
+}
+
+.playlist {
+    margin-top: var(--unit2);
+
+    .title {
+        color: var(--black-color);
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 12px;
+        padding: 3px 6px;
+
+        .icon {
+            display: none;
+            font-size: 1.4rem;
+        }
+
+        &:hover {
+            color: var(--white-color);
+            background-color: var(--black-color);
+
+            .icon {
+                display: inline-block;
+            }
+        }
+    }
+}
