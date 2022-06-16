@@ -1,0 +1,69 @@
+$songMusicHeigth: 42px;
+
+.SongMusic {
+    font-size: 1.1rem;
+    height: $songMusicHeigth;
+    border-radius: 8px;
+
+    .number {
+        width: 30px;
+        text-align: center;
+
+        .icon {
+            font-size: 1.6rem;
+        }
+    }
+
+    .img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .music {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        .name {
+            flex: 1;
+        }
+
+        .artist {
+            flex: 1;
+        }
+    }
+
+    .time {
+        width: 60px;
+        text-align: center;
+    }
+
+    .options {
+        text-align: center;
+        width: 90px;
+
+        .icon {
+            font-size: 1.4rem;
+        }
+
+        .iconDots {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.hoverMusic {
+    transition: all linear 0.2s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--white-color);
+        padding: 0 6px;
+    }
+}
+
+.activeMuisc {
+    cursor: pointer;
+    background-color: var(--white-color);
+}

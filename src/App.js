@@ -1,39 +1,47 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
+import { ProviderHandle } from 'store';
 
 import './App.scss';
-import SideBar from "./compoments/sideBar/SideBar";
-import Header from "./compoments/header/Header";
-import Container from "./compoments/container/Container.js";
-import TabBar from "./compoments/tabBar/TabBar";
-import Login from './compoments/login/Login'
-import Register from './compoments/register/Register'
+import SideBar from './page/sideBar/SideBar';
+import Header from './page/header/Header';
+import Footer from './page/Footer/Footer';
+import Container from './page/container/Container.js';
+import TabBar from './page/tabBar/TabBar';
+import Login from './page/login/Login';
+import Register from './page/register/Register';
+import MyMusic from './page/myMusic/MyMusic';
 
+function Apps() {
+    return (
+        <div className="App">
+            <ProviderHandle>
+                <SideBar />
+
+                <div className="App__Container">
+                    <Header />
+
+                    <Routes>
+                        <Route path="/" element={<Container />} />
+                        <Route path="/my-music" element={<MyMusic />} />
+                    </Routes>
+
+                    <Footer />
+                </div>
+
+                <TabBar />
+            </ProviderHandle>
+        </div>
+    );
+}
 function App() {
-    function App() {
-        return (
-            <div className="App">
-                    <SideBar />
-
-                    <div className="App__Container">
-                        <Header />
-
-                        <Routes>
-                            <Route path="/" element={<Container />} />
-                        </Routes>
-                    </div>
-                    
-                    <TabBar />
-            </div>
-        )
-    }
     return (
         <Routes>
-            <Route path="/" element={<App />}/>
+            <Route path="*" element={<Apps />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
         </Routes>
-     
     );
 }
 

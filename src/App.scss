@@ -1,4 +1,4 @@
-@import './compoments/GlobalConfig/GlobalConfig.scss';
+@import './compoments/GlobalStyles/GlobalStyles.scss';
 
 #root{
     background-color: #dbdbdb;
@@ -8,6 +8,8 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+
+    
 }
 
 .App {
@@ -17,25 +19,28 @@
     background-color: #e7e8f3;
     border-radius: $unit2;
     box-shadow: 0 0 0.8rem black;
-    margin: 4% 0;
-    // position: relative;
+    margin: 5% 0;
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 2.2fr 1fr;
+
+    
 }
 
 .App__Container {
+    max-height: 90vh;
     position: relative;
-    padding: 0 1rem;  
 }
 
 .Container {
+    padding: 0 2rem;
     position: relative;
     top: 20px;
-    height: calc(100vh - 46px);
-    overflow-y: overlay;
+    height: calc(100% - $heightFooter - $headerHeight);
+    overflow: hidden auto;
 
     &::-webkit-scrollbar {
-        width: 0px;
+        width: 6px;
     }
 
     &::-webkit-scrollbar-track {
@@ -43,16 +48,17 @@
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: #ffa500;    /* Màu của thanh cuộn (scroll thumb) */
-        border-radius: 5px;       /* Bo góc scroll thumb */
-        border: 2px solid #ccc;  /* Không hỗ trợ padding, margin, transition nên dùng viền cùng màu nên để padding scroll thumb */
-
+        background-color: transparent;
+        border-radius: 80px;       /* Bo góc scroll thumb */
+        border: none;
+        
         &:hover {
-            background-color: #ff8000; /* Hiệu ứng di chuột đổi màu*/
+            background-color: #ffa500;    /* Màu của thanh cuộn (scroll thumb) */
         }
     }
-
-    &:hover::-webkit-scrollbar {
-        width: 6px;
+    
+    &:hover::-webkit-scrollbar-thumb {
+        border: 2px solid #ccc;  /* Không hỗ trợ padding, margin, transition nên dùng viền cùng màu nên để padding scroll thumb */
+        background-color: #ffa500; /* Hiệu ứng di chuột đổi màu*/
     }   
 }

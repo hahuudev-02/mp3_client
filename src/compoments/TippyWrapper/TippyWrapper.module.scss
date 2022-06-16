@@ -1,0 +1,61 @@
+.searchResults {
+    padding: 1rem;
+
+}
+
+.TippyWrapper {
+    li.TippyWrapperItem {
+        width: 100%;
+        height: 34px;
+        margin-top: 2px;
+        border-radius: 4px;
+        i.icon {
+            font-size: 1.4rem;
+            width: 40px;
+        }
+
+        span {
+            flex: 1;
+            font-size: 1.3rem;
+            color: var(--text-color);
+            font-weight: 400;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(184, 61, 61, 0.1);
+        }
+    }
+}
+
+.searchResults {
+
+    .searchResultsItem {
+        margin-top: 4px;
+        height: 42px;
+        border-radius: 6px;
+
+        img.img {
+            width: 40px;
+            height: 40px;
+            border-radius: 6px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        span {
+            font-size: 1.3rem;
+            color: var(--text-color);
+            font-weight: 300;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(184, 61, 61, 0.1);
+        }        
+    }
+}

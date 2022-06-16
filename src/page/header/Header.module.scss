@@ -1,0 +1,60 @@
+@import '../../compoments/GlobalStyles/GlobalStyles.scss';
+
+.Header {
+    height: $headerHeight;
+    position: sticky;
+    top: 10px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    .HeaderBtn {
+        width: 80px;
+        @extend .flex-item-around;
+    }
+
+    .HeaderSearch {
+        position: relative;
+        height: 80%;
+        flex: 1;
+        max-width: 400px;
+        background-color: #fff;
+        border-radius: 20px;
+
+        .wraper {
+            height: 100%;
+
+            input.HeaderSearchInput {
+                height: 100%;
+                flex: 1;
+                font-size: 1.4rem;
+                color: var(--text-color);
+            }
+        }
+
+        .iconClose {
+            width: 30px;
+        }
+
+        .iconLoad {
+            animation: spiner 1s linear infinite;
+        }
+
+        @keyframes spiner {
+            from {
+                transform: rotate(0);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .SearchResults {
+            position: absolute;
+            inset: 113% 0% auto auto;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+    }
+}
